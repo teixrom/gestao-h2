@@ -2,6 +2,7 @@ package br.com.gestao.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -32,8 +33,15 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/admin/**").hasRole("ADMINISTRADOR")
+                .requestMatchers("/", "/login", "/dashboard",
+                    "/produtos", "/vendas", "/categorias", "/clientes", "/estoque",
+                    "/contas-pagar", "/contas-receber",
+                    "/admin/usuarios",
+                    "/assets/**", "/favicon.ico",
+                    "/h2-console/**", "/error").permitAll()
                 .anyRequest().authenticated()
             )
+            .headers(headers -> headers.frameOptions(f -> f.sameOrigin()))
             .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
