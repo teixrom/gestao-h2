@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: ''
+  baseURL: '/api'
 })
 
 api.interceptors.request.use(config => {
@@ -17,7 +17,7 @@ api.interceptors.response.use(
   error => {
     if (error.response?.status === 401) {
       localStorage.removeItem('token')
-      window.location.href = '/login'
+      window.location.href = '/app/login'
     }
     return Promise.reject(error)
   }
