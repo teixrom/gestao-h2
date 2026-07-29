@@ -1,0 +1,7 @@
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/controller/MovimentacaoEstoqueControllerTest.java
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/controller/ProdutoControllerTest.java
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/controller/VendaControllerTest.java
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/GestaoApplicationTests.java
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/controller/AdminControllerTest.java
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/controller/DashboardControllerTest.java
+/home/teixrom/projetos/gestao/backend-h2/src/test/java/br/com/gestao/controller/AuthControllerTest.java
